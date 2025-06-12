@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Receita - Receitas Deliciosas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="publicar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Receitas Deliciosas</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+                <li><a href="publicar.html" class="active">Publicar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="publicar-section">
+            <h1>Publicar Nova Receita</h1>
+            <form id="receitaForm" class="receita-form">
+                <div class="form-group">
+                    <label for="titulo">Título da Receita:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredientes">Ingredientes:</label>
+                    <textarea id="ingredientes" name="ingredientes" required></textarea>
+                    <small>Digite cada ingrediente em uma nova linha</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="modoPreparo">Modo de Preparo:</label>
+                    <textarea id="modoPreparo" name="modoPreparo" required></textarea>
+                    <small>Digite cada passo em uma nova linha</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="tempoPreparo">Tempo de Preparo (minutos):</label>
+                    <input type="number" id="tempoPreparo" name="tempoPreparo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dificuldade">Dificuldade:</label>
+                    <select id="dificuldade" name="dificuldade" required>
+                        <option value="facil">Fácil</option>
+                        <option value="medio">Médio</option>
+                        <option value="dificil">Difícil</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagem">Imagem da Receita:</label>
+                    <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                </div>
+
+                <button type="submit" class="btn-publicar">Publicar Receita</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Receitas Deliciosas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="publicar.js"></script>
+</body>
+</html> 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receituteca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="logo.png" alt="Receituteca Logo" class="logo">
+      <span class="brand">Receituteca</span>
+    </div>
+  </header>
+  <main>
+    <!-- Tela de Publicar Receita -->
+    <section id="form-section" class="active">
+      <form id="recipe-form">
+        <div class="form-group">
+          <label for="photo">FOTO</label>
+          <input type="file" id="photo" accept="image/*">
+        </div>
+        <div id="photo-preview-container"><img id="photo-preview" style="display:none;max-width:100%;max-height:120px;margin-bottom:8px;"/></div>
+        <label>NOME<input type="text" id="name" required></label>
+        <label>INGREDIENTES<textarea id="ingredients" required></textarea></label>
+        <label>MODO DE PREPARO<textarea id="instructions" required></textarea></label>
+        <label>CATEGORIA DA RECEITA
+          <select id="category" required>
+            <option value="Doce">Doce</option>
+            <option value="Salgado">Salgado</option>
+            <option value="Carne">Carne</option>
+            <option value="Aves">Aves</option>
+            <option value="Peixe">Peixe</option>
+          </select>
+        </label>
+        <label>NÍVEL DE DIFICULDADE<input type="text" id="difficulty" required></label>
+        <label>TEMPO DE PREPARO<input type="text" id="time" required></label>
+        <button type="submit" id="submit-btn">Enviar Receita</button>
+      </form>
+      <button id="go-to-recipes" type="button">Ver receitas publicadas</button>
+    </section>
+    <!-- Tela de Receitas Publicadas -->
+    <section id="recipes-section" style="display:none;">
+      <div class="top-bar">
+        <input type="text" id="search" placeholder="Buscar receitas">
+        <nav id="category-bar">
+          <button class="category-btn" data-category="Todo">Todas</button>
+          <button class="category-btn" data-category="Aves">Aves</button>
+          <button class="category-btn" data-category="Peixe">Peixe</button>
+          <button class="category-btn" data-category="Carne">Carne</button>
+          <button class="category-btn" data-category="Doce">Doce</button>
+          <button class="category-btn" data-category="Salgado">Salgado</button>
+        </nav>
+      </div>
+      <div id="recipes-list"></div>
+      <button id="go-to-publicar">Publicar nova receita</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
